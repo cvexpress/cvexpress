@@ -1,0 +1,152 @@
+#{extends 'main.html' /}
+#{set title:post.title /}
+
+ 
+
+ <div class="container">
+ <div class="container-fluid">
+ <div class="row-fluid">
+ <div class="col-xs-8">
+      <!--Sidebar content-->
+      
+ 
+ #{display post:post, as:'full' /}
+
+ #{if session.username}
+ #{/if}
+ #{else}
+
+ <script type="text/javascript">
+    $(document).ready(function(){
+    	
+       // alert("hello");
+       // CKEDITOR.config.readOnly = true;
+      //  var nodes = document.getElementById("replyDiv").getElementsByTagName('*');
+       // for(var i = 0; i < nodes.length; i++)
+        //{
+        //     nodes[i].disabled = true;
+        //}
+    });
+    
+   
+
+
+</script>
+
+
+
+#{/else}
+
+<div id="replyDiv" >
+<div class="postAuthor_abstract">我来回答</div>
+    #{form @Application.postComment(post.id)}
+    #{ifErrors}
+        <div class="error">
+                     回答不能为空
+        </div>
+    #{/ifErrors}
+    
+    <p>
+    <textarea  class="ckeditor" rows="4" cols="50" id="content" name="content" placeholder="写回答...">
+    
+    </textarea>
+   
+
+	
+    <script type="text/javascript">CKEDITOR.replace('content',
+    		{
+    	
+    	height:100,
+    	contentsCss : 'body {overflow:hidden;}'
+    	
+
+    		});</script>
+     
+    </p>
+    <p  >
+        <input id="submit" type="submit" class="submit" value="我要回答" />
+    </p>
+#{/form}
+
+#{if session.username==null}
+ <script type="text/javascript" charset="utf-8">
+  CKEDITOR.config.readOnly = true;
+   var nodes = document.getElementById("replyDiv").getElementsByTagName('input');
+   for(var i = 0; i < nodes.length; i++)
+   {
+        nodes[i].disabled = true;
+   }
+ 
+$('form').click(function() { 
+	   $('#loginmodal').modal('show');
+}); 
+
+$('#replyDiv').click(function() { 
+	   $('#loginmodal').modal('show');
+}); 
+var element = CKEDITOR.document.getById( 'content' );
+element.on( 'click', function( ev )
+    {
+        // Prevent the click to chave any effect in the element.
+	$('#loginmodal').modal('show');
+    });
+
+</script>
+#{/if}
+
+
+ <script type="text/javascript" charset="utf-8">
+    $(function() {         
+        // Expose the form 
+        $('form').click(function() { 
+            $('form').expose({api: true}).load(); 
+        }); 
+        
+        // If there is an error, focus to form
+        if($('form .error').size()) {
+            $('form').expose({api: true, loadSpeed: 0}).load(); 
+            $('form input[type=text]').get(0).focus();
+        }
+    });
+
+</script>
+</div>
+
+
+
+
+    
+   
+
+
+
+
+        
+
+       
+      
+       
+      
+ </div>
+ <div class="col-xs-4">
+      <!--Body content-->
+        #{if session.username}
+    <div class="jumbotron" >
+    <ul style="list-style: none;">
+    <li class="postTitle_abstract"><a  href="@{Admin.createPost()}"><span class="glyphicon glyphicon-plus"></span> 发布文章</a></li>
+    </ul>
+    </div>
+    <!-- add a box  -->
+    #{/if}
+       
+       
+      
+     
+    
+</div>
+</div>
+</div>   
+</div>  
+
+
+

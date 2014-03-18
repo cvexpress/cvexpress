@@ -1,0 +1,71 @@
+
+ #{if _as == 'full'}
+<div >
+    <div class="postTitle_full"> ${_post.title} </div>
+     <div >
+     <a class="postAuthor_abstract">${_post.author.fullname}</a>
+
+    </div>
+    <div class="post-content">
+  
+           #{verbatim}
+            ${_post.content.raw()}
+            #{/verbatim}
+           
+    </div>
+     
+  
+     #{list items:_post.comments, as:'comment'}
+         <div >
+                <div>
+                    <span class="postAuthor_abstract">${comment.author}</span>
+                </div>
+                <div class="comment-content">
+                    #{verbatim}
+                    ${comment.content.raw()}
+                    #{/verbatim}
+                </div>
+         </div>
+        #{/list}
+ </div>
+#{/if}
+    
+
+
+#{if _as == 'abstract'}
+<div >
+    <div class="postTitle_abstract">
+        <a  href="@{Application.show(_post.id)}">${_post.title}</a>
+    </div>
+     <div>
+        <a class="postAuthor_abstract">${_post.author.fullname}</a>
+    </div>
+        <div class="postContent_abstract">
+        <p>
+           #{verbatim}
+            ${_post.content.raw()}
+            #{/verbatim}
+        </p>
+        </div>
+        <script>
+        $(".postContent_abstract").each(function(i){ 
+       
+        var divH = $(this).height(); 
+        var $p = $("p", $(this)).eq(0); 
+         
+       while ($p.outerHeight() > 50) { 
+        $p.text($p.text().replace(/(\s)*([a-zA-Z0-9]+|\W)(\.\.\.)?$/, "...")); 
+    }; 
+});
+        </script>
+        
+        
+        
+     
+ </div>      
+#{/if}
+
+  
+    
+
+

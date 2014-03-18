@@ -1,0 +1,65 @@
+#{extends 'main.html' /}
+
+
+<div class="container">
+ <div class="container-fluid">
+ <div class="row-fluid">
+ <div class="col-xs-8">
+      <!--Sidebar content-->
+      
+  #{doLayout /}    
+
+       
+      
+       
+      
+ </div>
+ <div class="col-xs-4">
+      <!--Body content-->
+   <div class="jumbotron">
+    
+    <ul id="adminMenu" style="list-style: none;">
+        
+        #{secure.check 'admin'}
+            <li class="postTitle_abstract">
+                <a href="@{Posts.list()}">文章</a>
+            </li>
+            <li class="postTitle_abstract">
+                <a href="@{Categorys.list()}">类别</a>
+            </li>
+            <li class="postTitle_abstract">
+                <a href="@{Comments.list()}">评论</a>
+            </li>
+            <li class="postTitle_abstract">
+                <a href="@{Users.list()}">作者</a>
+            </li>
+        #{/secure.check}
+    </ul>
+    
+   
+</div>
+
+   
+       
+      
+     
+    
+</div>
+</div>
+</div>   
+</div>  
+
+
+
+
+
+
+
+
+
+ 
+
+    
+  
+   
+

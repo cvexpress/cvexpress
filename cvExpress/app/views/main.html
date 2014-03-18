@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="@{'/public/images/favicon.ico'}">
+    <title>计算机视觉快讯</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="@{'/public/stylesheets/bootstrap.min.css'}"  rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="@{'/public/stylesheets/navbar-fixed-top.css'}"  rel="stylesheet">
+    <link href="@{'/public/stylesheets/mycss.css'}"  rel="stylesheet">
+    
+    
+  <script type="text/javascript" src="@{'/public/ckeditor_4.3.3_full/ckeditor/ckeditor.js'}"></script>
+  <script src="@{'/public/javascripts/jquery-1.4.2.min.js'}"></script>
+  <script src="@{'/public/javascripts/jquery.tools-1.2.5.toolbox.expose.min.js'}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="@{'/public/javascripts/bootstrap.min.js'}"></script>
+  <script src="@{'/public/javascripts/bootstrap.js'}"></script>
+  <script type="text/javascript"> 
+  $('.dropdown-toggle').dropdown();
+  </script>
+  
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="@{'/public/javascripts/bootstrap.min.js'}"></script>
+  
+ 
+ 
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="@{'/public/javascripts/js/ie8-responsive-file-warning.js'}"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+     
+    <![endif]-->
+  <style>
+ .navbar
+ {
+   background: #0767C7;
+ }
+ .navbar-inverse .navbar-inner {
+     background: blue;
+    
+ }
+ .dropdown-menu{
+  background: #0767C7;
+   color: #F0F0F0;
+ }
+  .dropdown-menu:focus{
+  background: #0767C7;
+   color: #F0F0F0;
+ }
+ .dropdown.open{
+    color: #F00;
+}
+
+ .dropdown-toggle:active, .open .dropdown-toggle {background:#085FB4; color:white;
+}
+  .dropdown-menu > li > a {
+     color: #F0F0F0;
+     font-size:13px;
+ }
+  .dropdown-menu > li > a:hover,
+  .dropdown-menu > li > a:focus
+   {
+     color: white;
+     background: #085FB4;
+ }
+ 
+ .navbar .nav > li > a {
+     color: #F0F0F0;
+     font-size:13px;
+ }
+
+  .navbar .nav > li > a:hover,
+  .navbar .nav > li > a:focus {
+     color: white;
+     background-color: #085FB4;
+ }
+ .highlight{
+  color: white;
+     background-color: #085FB4;
+ }
+ .navbar .nav .active > a {
+     background-color: #0767C7;
+   
+ }
+
+ .navbar .navbar-brand{
+     color: white;
+     font-size:30px;
+ }
+ .jumbotron{
+ border-bottom: 2px solid #eee;
+  border-top: 2px solid #eee;
+   border-left: 2px solid #eee;
+    border-right: 2px solid #eee;
+ background-color: #F7F7F7;
+ margin-left: 0;
+ margin-top: 0;
+ margin-bottom: 0;
+ padding: 0;
+ }
+ .container-fluid{
+ margin-left: 0;
+ }
+ .row-fluid{
+ margin-left: 0;
+ }
+ .col-xs-8{
+  margin-left: 0;
+ }
+ .modal {background-color: white;
+ opacity: 1;
+ width: 400px;
+ height: 300px;
+ margin-top:80px;
+  margin-left: auto ;
+  margin-right: auto ;
+  overflow-y:auto;
+ }
+ .circle {
+  display:inline;
+  background:rgb(255,255,255);
+  border-radius: 50%;
+  width: 4px;
+	height: 4px; 
+  
+}
+
+.circle a {
+  font-size:10px;
+  text-decoration:none;
+  color:#2281E1;
+  opacity: 1;
+}
+ 
+ .close{
+ color:white;
+ opacity: 1;
+ }
+ .modal-header,
+ .modal-header>a
+ {
+  background-color: #0B76E2;
+   color: white;
+   margin-left:0px;
+   margin-right:0px;
+ }
+ a.disabled:link, a.disabled:visited,a.disabled:focus,a.disabled:hover { color: grey; }
+ li.disabled:link, li.disabled:visited,li.disabled:focus,li.disabled:hover { color: grey; }    
+  </style> 
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div  class="navbar   navbar-fixed-top" >
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">CV快讯</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-left">
+            <li  id="cv"><a href="@{Application.index('cv')}">机器视觉</a></li>
+            <li  id="ml"><a href="@{Application.index('ml')}">机器学习</a></li>
+            <li  id="startup"><a href="@{Application.index('startup')}">创业</a></li>
+            <li  id="recruit"><a href="@{Application.index('recruit')}">招聘</a></li>
+            <li  id="freelancer"><a href="@{Application.index('freelancer')}">外包</a></li>
+
+        
+          </ul>
+
+
+          
+          <ul class="nav navbar-nav navbar-right">
+          #{if session.username}
+           <li class="dropdown">   
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            ${session.fullname}
+            <b class="caret"></b>   
+            </a>    
+            <ul class="dropdown-menu">                
+                <li><a href="@{Admin.index()}">我的主页</a></li>
+                <!--  <li><a href="#">设置</a></li>-->
+                 #{secure.check 'admin'}
+                 <li><a href="@{Admin.index()}">管理</a></li>  
+                 #{/secure.check}
+                 <li><a href="@{Secure.logout()}">退出</a></li>  
+             </ul>  
+             </li>
+             
+   
+             
+          #{/if}
+          #{else}
+ 
+           <li class="active"> <a data-toggle="modal" href="#registermodal"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+           <li class="active"><a data-toggle="modal" href="#loginmodal" >登录</a></li>
+           
+          #{/else}
+          
+          
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    
+   
+#{if flash.error}
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+    	
+        $('#loginmodal').modal('show');
+        
+    });
+</script>
+#{/if}
+
+<div id="loginmodal" class="modal fade in" style="display: none; ">  
+<div class="modal-header">  登录
+ <a href="@{Secure.clearFlash()}" class="close" data-dismiss="modal" id="loginmodal_close">X</a> 
+</div>  
+<div class="modal-body">  
+      
+      #{form @Secure.authenticate() }
+             <div style="text-align: right;"> <a id="login_register" >注册</a></div>
+       #{if flash.error}
+			<p class="error">
+				电邮或者密码错误
+				&{flash.error}
+				
+			</p>
+			
+		#{/if}
+       
+        <input name="username" type="email" class="form-control" placeholder="电邮" required autofocus>
+        <input name="password" type="password" class="form-control" placeholder="密码" required>
+       <input checked type="checkbox" value="remember-me" /> 记住我 
+       <label ><a>忘记密码？</a></label>
+         
+       
+        <button  class="btn btn-lg btn-primary btn-block  " type="submit">登录</button>
+         
+        
+      #{/form}
+
+    
+               
+</div>  
+</div>
+
+<div id="registermodal" class="modal fade in" style="display: none; ">  
+<div class="modal-header">  注册
+ <a href="@{Secure.clearFlash()}" class="close" data-dismiss="modal" id="registermodal_close">X</a> 
+</div>  
+<div class="modal-body">  
+  
+      #{form @Application.registerUser() }
+       <div style="text-align: right;"> <a id="register_login"  >登录</a></div>
+      
+       
+        <input name="usernameN" type="email" class="form-control" placeholder="电邮" required autofocus>
+        <input name="passwordN" type="password" class="form-control" placeholder="密码" required>
+          <input  type="checkbox" value="agree1" checked="checked" /> 同意
+          <label ><a>CV快讯服务条款</a></label>
+        <button  class="btn btn-lg btn-primary btn-block  " type="submit">注册</button>
+      #{/form}             
+</div>  
+</div>
+<script>
+
+$('#loginmodal_close').click(function() {
+    location.reload();
+});
+
+$('#registermodal_close').click(function() {
+    location.reload();
+});
+$("#register_login").click(function() {
+    $("#loginmodal").modal('show');
+    $("#registermodal").modal('hide');
+});
+$("#login_register").click(function() {
+    $("#loginmodal").modal('hide');
+    $("#registermodal").modal('show');
+});
+</script>
+   #{doLayout /}        
+
+  
+
+  </body>
+</html>
+
+
+

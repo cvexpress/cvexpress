@@ -1,0 +1,56 @@
+.postTitle_abstract{
+color: rgb(34, 85, 153);
+font-size: 18px;
+font-weight: bold;
+text-align: left;
+word-break : break-all; 
+text-indent: 0px
+}
+.postAuthor_abstract{
+color: rgb(34, 34, 34);
+font-size: 13px;
+font-weight :bold;
+}
+.postAuthor_abstract:hover{
+color: rgb(34, 34, 34);
+font-size: 13px;
+font-weight :bold;
+}
+
+.postTitle_full{
+color: rgb(34, 34, 34);
+font-size: 18px;
+font-weight: bold;
+text-align: left;
+word-break : break-all; 
+text-indent: 0px;
+}
+.error{
+color: rgb(255, 0, 0);
+font-size: 13px;
+text-align: center;
+}
+input.submit{
+	float:right;
+	background: #0767C7;
+	background-color:#0767C7;
+	color: #F0F0F0;
+}
+input[type=submit] {
+	padding:5px 15px; background:#0767C7; border:0 none;
+cursor:pointer;
+-webkit-border-radius: 5px;
+border-radius: 5px; }
+
+
+.postContent_abstract
+{
+
+   // width: 610px; 
+  //  height: 3em; 
+   // margin: 1em; 
+}
+.postContent_abstract p { 
+    //margin: 0; 
+   // line-height: 1.5em; 
+} 

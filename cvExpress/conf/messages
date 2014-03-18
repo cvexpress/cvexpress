@@ -1,0 +1,17 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+title=标题
+content=内容
+postedAt=日期
+author=用户名
+post=被评论文章
+tags=类别
+name=类别名
+email=电邮
+password=密码
+fullname=作者
+isAdmin=管理员
+secure.username=电邮:
+secure.password=密码:
+secure.signin=登陆

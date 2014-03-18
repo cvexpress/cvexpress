@@ -1,0 +1,80 @@
+#{extends 'main.html' /}
+
+ <div class="container">
+ <div class="container-fluid">
+ <div class="row-fluid">
+ <div class="col-xs-8">
+      <!--Sidebar content-->
+      <!-- newPost-->
+        #{form   @Admin.publishPost()}
+      
+       
+        <input name="title" type="text" class="form-control" placeholder="标题" value="${params.title}" required autofocus>
+        <p>
+    <textarea  class="ckeditor" rows="4" cols="50" id="content" name="content" placeholder="写回答..." required>
+    
+    </textarea>
+   
+
+	
+    <script type="text/javascript">CKEDITOR.replace('content',
+    		{
+    	height:300,
+    	contentsCss : 'body {overflow:hidden;}'
+    	
+
+    		});</script>
+     
+    </p>
+    <p>
+    <select id="postCategory" name="postCategory" value="${params.postCategory}" >
+        <option>机器视觉</option>
+        <option>机器学习</option>
+        <option>创业</option>
+        <option>招聘</option>
+        <option>外包</option>
+    </select>
+    </p>
+        
+        <button  class="btn btn-lg btn-primary btn-block  " type="submit">发布</button>
+      #{/form}    
+      
+
+
+       
+      
+       
+      
+ </div>
+ <div class="col-xs-4">
+      <!--Body content-->
+    #{if session.username}
+    <div class="jumbotron" >
+    <ul style="list-style: none;">
+    <li class="postTitle_abstract"><a  href="@{Admin.createPost()}"><span class="glyphicon glyphicon-plus"></span> 发布文章</a></li>
+    </ul>
+    </div>
+    <!-- add a box  -->
+    #{/if}
+       
+      
+     
+    
+</div>
+</div>
+</div>   
+</div>  
+
+
+
+
+
+
+
+
+
+ 
+
+    
+  
+   

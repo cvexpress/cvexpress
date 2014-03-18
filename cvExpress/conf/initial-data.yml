@@ -1,0 +1,178 @@
+# Test data
+
+User(bob):
+    email:          bob@gmail.com
+    password:       secret
+    fullname:       Bob
+    isAdmin:        true
+    
+User(jeff):
+    email:          jeff@gmail.com
+    password:       secret
+    fullname:       Jeff    
+    
+User(paul):
+    email:          paul@gmail.com
+    password:       secret
+    fullname:       Paul    
+    
+Category(cv):
+    name:          cv
+    
+
+Category(ml):
+    name:          ml
+    
+
+Category(startup):
+    name:           startup
+    
+
+Category(recruit):
+    name:           recruit    
+    
+Post(firstBobPost12):
+    title:          Binarized Normed Gradients for Objectness Estimation at 300fps1
+    postedAt:       2009-06-14
+    author:         bob
+    tags:           
+                    - cv
+    content:        >
+                    Computer vision is a field that includes methods for acquiring, processing, analyzing, and understanding images and, in general, high-dimensional data from the real world in order to produce numerical or symbolic information, e.g., in the forms of decisions
+Post(firstBobPost11):
+    title:          Binarized Normed Gradients for Objectness Estimation at 300fps2
+    postedAt:       2009-06-13
+    author:         bob
+    tags:           
+                    - cv
+    content:        >
+                    Computer vision is a field that includes methods for acquiring, processing, analyzing, and understanding images and, in general, high-dimensional data from the real world in order to produce numerical or symbolic information, e.g., in the forms of decisions
+Post(firstBobPost10):
+    title:          Binarized Normed Gradients for Objectness Estimation at 300fps3
+    postedAt:       2009-06-12
+    author:         bob
+    tags:           
+                    - cv
+    content:        >
+                    Computer vision is a field that includes methods for acquiring, processing, analyzing, and understanding images and, in general, high-dimensional data from the real world in order to produce numerical or symbolic information, e.g., in the forms of decisions
+Post(firstBobPost9):
+    title:          Binarized Normed Gradients for Objectness Estimation at 300fps4
+    postedAt:       2009-06-11
+    author:         bob
+    tags:           
+                    - cv
+    content:        >
+                    Computer vision is a field that includes methods for acquiring, processing, analyzing, and understanding images and, in general, high-dimensional data from the real world in order to produce numerical or symbolic information, e.g., in the forms of decisions
+Post(firstBobPost8):
+    title:          Binarized Normed Gradients for Objectness Estimation at 300fps5
+    postedAt:       2009-06-10
+    author:         bob
+    tags:           
+                    - cv
+    content:        >
+                    Computer vision is a field that includes methods for acquiring, processing, analyzing, and understanding images and, in general, high-dimensional data from the real world in order to produce numerical or symbolic information, e.g., in the forms of decisions
+Post(firstBobPost7):
+    title:          Binarized Normed Gradients for Objectness Estimation at 300fps6
+    postedAt:       2009-06-09
+    author:         bob
+    tags:           
+                    - cv
+    content:        >
+                    Computer vision is a field that includes methods for acquiring, processing, analyzing, and understanding images and, in general, high-dimensional data from the real world in order to produce numerical or symbolic information, e.g., in the forms of decisions
+Post(firstBobPost6):
+    title:          Binarized Normed Gradients for Objectness Estimation at 300fps7
+    postedAt:       2009-06-08
+    author:         bob
+    tags:           
+                    - cv
+    content:        >
+                    Computer vision is a field that includes methods for acquiring, processing, analyzing, and understanding images and, in general, high-dimensional data from the real world in order to produce numerical or symbolic information, e.g., in the forms of decisions
+Post(firstBobPost5):
+    title:          Binarized Normed Gradients for Objectness Estimation at 300fps8
+    postedAt:       2009-06-07
+    author:         bob
+    tags:           
+                    - cv
+    content:        >
+                    Computer vision is a field that includes methods for acquiring, processing, analyzing, and understanding images and, in general, high-dimensional data from the real world in order to produce numerical or symbolic information, e.g., in the forms of decisions
+Post(firstBobPost4):
+    title:          Binarized Normed Gradients for Objectness Estimation at 300fps9
+    postedAt:       2009-06-06
+    author:         bob
+    tags:           
+                    - cv
+    content:        >
+                    Computer vision is a field that includes methods for acquiring, processing, analyzing, and understanding images and, in general, high-dimensional data from the real world in order to produce numerical or symbolic information, e.g., in the forms of decisions
+Post(firstBobPost3):
+    title:          Binarized Normed Gradients for Objectness Estimation at 300fps10
+    postedAt:       2009-06-05
+    author:         bob
+    tags:           
+                    - cv
+    content:        >
+                    Computer vision is a field that includes methods for acquiring, processing, analyzing, and understanding images and, in general, high-dimensional data from the real world in order to produce numerical or symbolic information, e.g., in the forms of decisions
+Post(firstBobPost2):
+    title:          Binarized Normed Gradients for Objectness Estimation at 300fps11
+    postedAt:       2009-06-04
+    author:         bob
+    tags:           
+                    - cv
+    content:        >
+                    Computer vision is a field that includes methods for acquiring, processing, analyzing, and understanding images and, in general, high-dimensional data from the real world in order to produce numerical or symbolic information, e.g., in the forms of decisions
+Post(firstBobPost1):
+    title:          Binarized Normed Gradients for Objectness Estimation at 300fps12
+    postedAt:       2009-06-03
+    author:         bob
+    tags:           
+                    - cv
+    content:        >
+                    Computer vision is a field that includes methods for acquiring, processing, analyzing, and understanding images and, in general, high-dimensional data from the real world in order to produce numerical or symbolic information, e.g., in the forms of decisions
+Post(firstBobPost):
+    title:          Binarized Normed Gradients for Objectness Estimation at 300fps13
+    postedAt:       2009-06-02
+    author:         bob
+    tags:           
+                    - cv
+    content:        >
+                    Computer vision is a field that includes methods for acquiring, processing, analyzing, and understanding images and, in general, high-dimensional data from the real world in order to produce numerical or symbolic information, e.g., in the forms of decisions
+
+Post(secondBobPost):
+    title:          Machine learning
+    postedAt:       2009-03-25
+    author:         bob
+    tags:           
+                    - ml
+    content:        >
+                    Machine learning, a branch of artificial intelligence, concerns the construction and study of systems that can learn from data. For example, a machine learning system could be trained on email messages to learn to distinguish between spam and non-spam messages. After learning, it can then be used to classify new email messages into spam and non-spam folders.
+
+
+
+                    
+Post(jeffPost):
+    title:          a new cv startup
+    postedAt:       2009-06-06
+    author:         jeff
+    tags:           
+                    - startup
+    content:        >
+                    a new cv strartup is found recently                    
+Comment(c1):
+    author:         Guest
+    content:        >
+                    You are right !
+    postedAt:       2009-06-14
+    post:           firstBobPost
+    
+Comment(c2):
+    author:         Mike
+    content:        >
+                    I knew that ...
+    postedAt:       2009-06-15
+    post:           firstBobPost    
+    
+Comment(c3):
+    author:         Tom
+    content:        >
+                    This post is useless ?
+    postedAt:       2009-04-05
+    post:           secondBobPost    

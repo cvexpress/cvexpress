@@ -1,0 +1,101 @@
+#{extends 'main.html' /}
+
+ <div class="container">
+ <div class="container-fluid">
+ <div class="row-fluid">
+ <div class="col-xs-8">
+      <!--Sidebar content-->
+      
+ 
+ #{if olderPosts.size()}
+    
+     
+            #{list items:olderPosts, as:'oldPost'}
+                #{display post:oldPost, as:'abstract' /}
+            #{/list}
+      
+        
+#{/if}
+        
+<div align="center">
+  
+  <ul class="pagination pagination-lg">
+  #{if range_page}
+  <li id="prepageli" ><a id="prepage" class="disabled" href="@{Application.showPage(current_category,active_page,2)}">&laquo;</a></li>
+  #{/if}
+   #{list items:range_page, as:'pageIndex'}
+               <li id="${pageIndex}"><a href="@{Application.showPage(current_category,pageIndex,1)}">${pageIndex}</a></li>
+   #{/list}
+   #{if range_page}
+  <li id="nextpageli"><a id="nextpage" href="@{Application.showPage(current_category,active_page,3)}">&raquo;</a></li>
+    #{/if}
+</ul>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	//alert('1');
+    $('#${active_page}').addClass('active');
+    $('#${current_category}').addClass('highlight');
+    if (${warning_type_pre}==1)
+    	{
+    	 $("#prepage").addClass('disabled');
+    	 $("#prepageli").addClass('disabled');
+    	$("#prepage").click(function(e){
+    		
+
+    		   return false;
+    	})
+
+    	}
+    
+    if (${warning_type_next}==1)
+	{
+	 $("#nextpage").addClass('disabled');
+	 $("#nextpageli").addClass('disabled');
+	$("#nextpage").click(function(e){
+		
+
+		   return false;
+	})
+
+	}
+    
+});
+</script>
+</div>       
+      
+       
+      
+ </div>
+ <div class="col-xs-4">
+      <!--Body content-->
+    #{if session.username}
+    <div class="jumbotron" >
+    <ul style="list-style: none;">
+    <li class="postTitle_abstract"><a  href="@{Admin.createPost()}"><span class="glyphicon glyphicon-plus"></span> 发布文章</a></li>
+    </ul>
+    </div>
+    <!-- add a box  -->
+    #{/if}
+       
+      
+     
+    
+</div>
+</div>
+</div>   
+</div>  
+
+
+
+
+
+
+
+
+
+ 
+
+    
+  
+   
